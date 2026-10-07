@@ -60,7 +60,7 @@ L-BFGS Optimization
 Generated Stylized Image
 VGG Layers Used
 
-Style Layers:
+## Style Layers:
 
 r11
 r21
@@ -68,13 +68,14 @@ r31
 r41
 r51
 
-Content Layer:
+##Content Layer:
 
 r42
 
 The VGG architecture contains convolutional layers with 3 × 3 kernels, ReLU activation and 2 × 2 max pooling.
 
-Working
+## Working
+
 Load the style and content images.
 Resize the images to 512 × 512.
 Convert the images into PyTorch tensors and normalize them.
@@ -88,7 +89,9 @@ Combine the losses using their respective weights.
 Optimize the generated image using the L-BFGS optimizer.
 Continue optimization for up to 500 iterations.
 Post-process the optimized tensor to obtain the final stylized image.
-Technologies Used
+
+## Technologies Used
+
 Python
 PyTorch
 TorchVision
@@ -100,7 +103,7 @@ Loss Function
 
 The project uses Style Loss and Content Loss.
 
-Style Loss
+## Style Loss
 
 Style loss is calculated using the Gram Matrix and Mean Squared Error (MSE).
 
@@ -108,7 +111,7 @@ Style Loss = MSE(Generated Gram Matrix, Style Gram Matrix)
 
 The Gram Matrix represents correlations between feature maps and captures the artistic style and texture.
 
-Content Loss
+## Content Loss
 
 Content loss compares the content features of the generated image with the content image.
 
